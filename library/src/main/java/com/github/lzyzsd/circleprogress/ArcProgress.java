@@ -281,7 +281,8 @@ public class ArcProgress extends View {
         canvas.drawArc(rectF, startAngle, arcAngle, false, paint);
         paint.setColor(finishedStrokeColor);
         canvas.drawArc(rectF, finishedStartAngle, finishedSweepAngle, false, paint);
-
+        canvas.save();
+        canvas.rotate(90, getWidth() / 2, getHeight() / 2);
         String text = String.valueOf(getProgress());
         if (!TextUtils.isEmpty(text)) {
             textPaint.setColor(textColor);
