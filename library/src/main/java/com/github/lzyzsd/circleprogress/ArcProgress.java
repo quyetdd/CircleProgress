@@ -274,7 +274,7 @@ public class ArcProgress extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        float startAngle = 270 - arcAngle / 2f;
+        float startAngle = 360 - arcAngle / 2f;
         float finishedSweepAngle = progress / (float) getMax() * arcAngle;
         float finishedStartAngle = startAngle;
         paint.setColor(unfinishedStrokeColor);
