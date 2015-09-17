@@ -280,7 +280,7 @@ public class ArcProgress extends View {
         paint.setColor(unfinishedStrokeColor);
         canvas.drawArc(rectF, startAngle, arcAngle, false, paint);
         canvas.save();
-        canvas.rotate(180, getWidth() / 2, getHeight() / 2);
+        canvas.rotate(90, getWidth() / 2, getHeight() / 2);
         paint.setColor(finishedStrokeColor);
         canvas.drawArc(rectF, finishedStartAngle, finishedSweepAngle, false, paint);
         canvas.restore();
