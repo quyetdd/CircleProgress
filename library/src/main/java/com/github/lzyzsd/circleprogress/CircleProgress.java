@@ -22,7 +22,7 @@ public class CircleProgress extends View {
 
     private float textSize;
     private int textColor;
-    private int progress = 0;
+    private float progress = 0;
     private int max;
     private int finishedColor;
     private int unfinishedColor;
@@ -101,11 +101,11 @@ public class CircleProgress extends View {
         super.invalidate();
     }
 
-    public int getProgress() {
+    public float getProgress() {
         return progress;
     }
 
-    public void setProgress(int progress) {
+    public void setProgress(float progress) {
         this.progress = progress;
         if (this.progress > getMax()) {
             this.progress %= getMax();
@@ -237,7 +237,7 @@ public class CircleProgress extends View {
         bundle.putInt(INSTANCE_FINISHED_STROKE_COLOR, getFinishedColor());
         bundle.putInt(INSTANCE_UNFINISHED_STROKE_COLOR, getUnfinishedColor());
         bundle.putInt(INSTANCE_MAX, getMax());
-        bundle.putInt(INSTANCE_PROGRESS, getProgress());
+        bundle.putFloat(INSTANCE_PROGRESS, getProgress());
         bundle.putString(INSTANCE_SUFFIX, getSuffixText());
         bundle.putString(INSTANCE_PREFIX, getPrefixText());
         return bundle;
