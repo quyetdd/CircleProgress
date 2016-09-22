@@ -28,7 +28,7 @@ public class ArcProgress extends View {
     private String bottomText;
     private float textSize;
     private int textColor;
-    private int progress = 0;
+    private float progress = 0;
     private int max;
     private int finishedStrokeColor;
     private int unfinishedStrokeColor;
@@ -156,11 +156,11 @@ public class ArcProgress extends View {
         this.invalidate();
     }
 
-    public int getProgress() {
+    public float getProgress() {
         return progress;
     }
 
-    public void setProgress(int progress) {
+    public void setProgress(float progress) {
         this.progress = progress;
         if (this.progress > getMax()) {
             this.progress %= getMax();
@@ -314,7 +314,7 @@ public class ArcProgress extends View {
         bundle.putString(INSTANCE_BOTTOM_TEXT, getBottomText());
         bundle.putFloat(INSTANCE_TEXT_SIZE, getTextSize());
         bundle.putInt(INSTANCE_TEXT_COLOR, getTextColor());
-        bundle.putInt(INSTANCE_PROGRESS, getProgress());
+        bundle.putFloat(INSTANCE_PROGRESS, getProgress());
         bundle.putInt(INSTANCE_MAX, getMax());
         bundle.putInt(INSTANCE_FINISHED_STROKE_COLOR, getFinishedStrokeColor());
         bundle.putInt(INSTANCE_UNFINISHED_STROKE_COLOR, getUnfinishedStrokeColor());

@@ -29,7 +29,7 @@ public class DonutProgress extends View {
     private float textSize;
     private int textColor;
     private int innerBottomTextColor;
-    private int progress = 0;
+    private float progress = 0;
     private int max;
     private int finishedStrokeColor;
     private int unfinishedStrokeColor;
@@ -182,11 +182,11 @@ public class DonutProgress extends View {
         return getProgress() / (float) max * 360f;
     }
 
-    public int getProgress() {
+    public float getProgress() {
         return progress;
     }
 
-    public void setProgress(int progress) {
+    public void setProgress(float progress) {
         this.progress = progress;
         if (this.progress > getMax()) {
             this.progress %= getMax();
@@ -385,7 +385,7 @@ public class DonutProgress extends View {
         bundle.putInt(INSTANCE_UNFINISHED_STROKE_COLOR, getUnfinishedStrokeColor());
         bundle.putInt(INSTANCE_MAX, getMax());
         bundle.putInt(INSTANCE_STARTING_DEGREE, getStartingDegree());
-        bundle.putInt(INSTANCE_PROGRESS, getProgress());
+        bundle.putFloat(INSTANCE_PROGRESS, getProgress());
         bundle.putString(INSTANCE_SUFFIX, getSuffixText());
         bundle.putString(INSTANCE_PREFIX, getPrefixText());
         bundle.putString(INSTANCE_TEXT, getText());
